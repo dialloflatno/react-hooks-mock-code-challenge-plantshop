@@ -3,12 +3,13 @@ import NewPlantForm from "./NewPlantForm";
 import PlantList from "./PlantList";
 import Search from "./Search";
 
-function PlantPage() {
+function PlantPage(props) {
+
   return (
     <main>
-      <NewPlantForm />
+      <NewPlantForm prevList = {props.listPlants} />
       <Search />
-      <PlantList />
+      <PlantList plantCardData = {props.listPlants} />
     </main>
   );
 }
